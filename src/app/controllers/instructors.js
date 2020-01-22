@@ -46,7 +46,7 @@ module.exports = {
             if ( err ) return res.send("Database error!")
 
             return res.redirect(`/instructors/${results.rows[0].id}`)
-            //teste
+            console.log('teste')
         })
         
     },
