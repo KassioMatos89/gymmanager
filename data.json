@@ -1,0 +1,53 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=500",
+      "name": "Alpha Kaos",
+      "email": "teste@teste.com",
+      "birth": 1578355200000,
+      "gender": "M",
+      "blood": "A+",
+      "weight": "18",
+      "height": "190"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1547919307-1ecb10702e6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Kassio Matos",
+      "birth": 618019200000,
+      "gender": "M",
+      "services": "Natação, Crossfit, teste",
+      "created_at": 1577210928065
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Francinete Matos",
+      "birth": 1328054400000,
+      "gender": "F",
+      "services": "Natação, Aeróbico",
+      "created_at": 1577753178129
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1517963628607-235ccdd5476c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Alpha Kaos",
+      "birth": -385344000000,
+      "gender": "M",
+      "services": "Filho, Estudar, Jogos, Trabalhos",
+      "created_at": 1577823567353
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1529475397998-d6a94c5a26f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "name": "Teste Create",
+      "birth": -169689600000,
+      "gender": "F",
+      "services": "Testes, jogos, estudos, filho",
+      "created_at": 1577823622123
+    }
+  ]
+}
