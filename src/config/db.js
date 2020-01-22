@@ -1,4 +1,4 @@
-const { Pool } = require('pgggg')
+const { Pool } = require('pg')
 
 module.exports = {
     user: "postgress",
