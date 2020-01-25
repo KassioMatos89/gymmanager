@@ -33,8 +33,7 @@ module.exports = {
 
         db.query(query, values, function (err, results){
             if ( err ) return res.send("Database error!")
-
-            //return res.redirect(`/instructors/${results.rows[0].id}`)
+            
             callback(results.rows[0])
         })
     },
