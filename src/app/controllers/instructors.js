@@ -41,12 +41,18 @@ module.exports = {
             instructor.created_at = date(instructor.created_at).format
 
             return res.render("instructors/show", { instructor })
-        }) 
+        })
     },
     
     //EDIT
     edit(req, res){
-        return 
+        Instructor.find(req.params.id, function(instructor){
+            if (!instructor) return res.send('Instructor not found!')
+
+            instructor.birth = date(instructor.birth).iso
+
+            return res.render("instructors/edit", { instructor })
+        }) 
     },
 
     //PUT
@@ -58,13 +64,15 @@ module.exports = {
                 return res.send('Please, fill all fields')
         }
 
-        let { avatar_url, birth, name, gender, services } = req.body
-        
-        return 
+        Instructor.update(req.body, function(){
+            return res.redirect(`/instructors/${req.body.id}`)
+        })
     },
 
     //DELETE
     delete(req, res){
-        return 
+        Instructor.delete(req.body.id, function(){
+            return res.redirect("/instructors")
+        }) 
     }
 }
