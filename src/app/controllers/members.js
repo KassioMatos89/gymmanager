@@ -12,7 +12,11 @@ module.exports = {
 
     //CREATE
     create(req, res){
-        return res.render("members/create")
+        
+        Member.instructorsSelectOptions(function(options){
+            
+            return res.render('members/create', { instructorOptions: options })
+        })
     },
 
     //POST
@@ -29,7 +33,7 @@ module.exports = {
         })
         
     },
-
+    //teste
     //SHOW
     show(req, res){
         Member.find(req.params.id, function(member){
@@ -49,8 +53,11 @@ module.exports = {
             if (!member) return res.send('Member not found!')
 
             member.birth = date(member.birth).iso
+            
+            Member.instructorsSelectOptions(function(options){
+                return res.render("members/edit", { member, instructorOptions: options })
+            })
 
-            return res.render("members/edit", { member })
         }) 
     },
 
@@ -75,4 +82,3 @@ module.exports = {
         }) 
     }
 }
-//teste
