@@ -33,7 +33,7 @@ module.exports = {
         })
         
     },
-
+    //teste
     //SHOW
     show(req, res){
         Member.find(req.params.id, function(member){
