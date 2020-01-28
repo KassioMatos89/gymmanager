@@ -25,7 +25,7 @@ module.exports = {
         }
 
         Instructor.create(req.body, function(instructor){
-            return res.redirect(`/instructor/${instructor.id}`)
+            return res.redirect(`/instructors/${instructor.id}`)
         })
         
     },
