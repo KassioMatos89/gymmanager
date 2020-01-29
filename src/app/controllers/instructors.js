@@ -5,8 +5,25 @@ module.exports = {
     //INDEX
     index(req, res){
 
-        const { filter } = req.query
+        let { filter, page, limit } = req.query
 
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * ( page -1 )
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(instructors){
+                return res.render('instructors/index', { instructors, filter })
+            }
+        }
+
+        Instructor.paginate(params)
+
+        /*
         if ( filter ) {
             Instructor.findBy(filter, function(instructors){
                 return res.render('instructors/index', { instructors, filter })
@@ -16,6 +33,7 @@ module.exports = {
                 return res.render('instructors/index', { instructors })
             })
         }
+        */
     },
 
     //CREATE
