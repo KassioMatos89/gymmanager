@@ -119,12 +119,11 @@ module.exports = {
             totalQuery = `(
                 SELECT count(*) FROM instructors
                 ${filterQuery}
-                AS total
-            )`
+            ) AS total`
         }
 
         query = `
-            SELECT instructors.*, ${totalQuery},count(members) AS total_students
+            SELECT instructors.*, ${totalQuery}, count(members) AS total_students
             FROM instructors
             LEFT JOIN members ON (instructors.id = members.instructor_id)
             ${filterQuery}
